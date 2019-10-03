@@ -1,0 +1,6 @@
+client=anyconnect
+username=
+pwd=
+addr=<url|ipaddr>
+profile=<0|1|2|...>
+sshname=

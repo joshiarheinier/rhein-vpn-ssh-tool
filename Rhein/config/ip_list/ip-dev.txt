@@ -1,0 +1,3 @@
+dev-service1:0.0.0.0
+dev-service2:127.0.0.1
+dev-service3:192.168.1.1

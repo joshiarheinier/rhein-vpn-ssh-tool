@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ "$1" == "connect" ]
+then
+	vpn-start.sh $2
+elif [ "$1" == "disconnect" ]
+then
+	vpn-stop.sh $2
+elif [ "$1" == "ssh" ]
+then
+	instance.sh $2 $3
+else
+	echo "usage for VPN connection: rhein {connect|disconnect} {dev|stg|prod}"
+	echo "usage for instance access: rhein ssh {dev|stg|prod} {service-name}"
+fi

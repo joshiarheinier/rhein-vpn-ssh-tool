@@ -1,0 +1,3 @@
+stg-service1:0.0.0.0
+stg-service2:127.0.0.1
+stg-service3:192.168.1.1
