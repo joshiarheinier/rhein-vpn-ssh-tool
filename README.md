@@ -1,7 +1,7 @@
 # Rhein: VPN & SSH Tool
 
 ## How to Use
-1. `brew install openvpn`
+1. `brew install openvpn` and install Cisco Anyconnect (if you need the VPN).
 2. Check script `open-vpn.sh` and make sure that your openvpn path is correct (on the script, the path is `/usr/local/Cellar/openvpn/2.4.7_1/sbin/openvpn` by default. Check whether the executable exists or not).
 3. Fill the configuration file in folder `config/` (template is already provided for both anyconnect and openvpn).
 4. If you're going to use the SSH feature as well, fill the instance list contained in folder `config/ip_list/` (template is already provided).
