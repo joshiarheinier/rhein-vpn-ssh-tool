@@ -1,14 +1,22 @@
 #!/bin/bash
+FILEPATH=`which $0`
+DIRPATH=`dirname $FILEPATH`
 if [ "$1" == "connect" ]
 then
-	vpn-start.sh $2
+	vpn-start.sh $2 $DIRPATH
 elif [ "$1" == "disconnect" ]
 then
-	vpn-stop.sh $2
+	vpn-stop.sh $2 $DIRPATH
+elif [ "$1" == "check" ]
+then
+	vpn-check.sh $2 $DIRPATH
 elif [ "$1" == "ssh" ]
 then
-	instance.sh $2 $3
+	instance.sh $2 $3 $DIRPATH
+elif [ "$1" == "seeip" ]
+then
+	cat $DIRPATH/config/ip_list/ip-$2.txt | grep $3
 else
-	echo "usage for VPN connection: rhein {connect|disconnect} {dev|stg|prod}"
-	echo "usage for instance access: rhein ssh {dev|stg|prod} {service-name}"
+	echo "usage for VPN connection: rhein {connect|disconnect|check} {env-name}"
+	echo "usage for instance access or information: rhein {ssh|seeip} {env-name} {service-name}"
 fi
